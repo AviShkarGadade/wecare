@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
 import '../widgets/custom_textfield.dart';
+import '../widgets/bottom_nav_bar.dart'; // ✅ Import bottom nav
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -43,7 +44,13 @@ class SignInScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    // ✅ Navigate to Home (Bottom Nav)
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => const BottomNavBar()),
+                    );
+                  },
                   child: const Text("Sign In"),
                 ),
                 const SizedBox(height: 15),

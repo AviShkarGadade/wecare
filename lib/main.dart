@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wecare_app/screens/signin_screen.dart';
 import 'screens/splash_screen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class WecareApp extends StatelessWidget {
         primaryColor: const Color(0xFF003300),
         fontFamily: 'Poppins',
       ),
-      home: const SplashScreen(),
+      home: const SplashScreen(nextPage: SignInScreen()),
     );
   }
 }
